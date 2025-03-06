@@ -12,7 +12,7 @@ int main() {
     struct stat info;
 
     // 1️. Crear y escribir en el archivo
-    fd = open("datos.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    fd = open("datos_info.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if (fd == -1) {
         perror("Error al abrir el archivo para escritura");
         return 1;
