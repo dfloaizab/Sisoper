@@ -40,7 +40,7 @@ Se debe garantizar:
 ###  Opción B: **Memoria compartida**
 
 - Usar un segmento de memoria con una **estructura compartida tipo cola**.
-- Se necesita sincronización: por ejemplo, usando **flags, turnos o semáforos** para gestionar el acceso de múltiples procesos cliente.
+- Si se necesita sincronización: usar **flags, turnos u otro tipo de variable** para gestionar el acceso de múltiples procesos cliente.
 
 ---
 
