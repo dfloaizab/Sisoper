@@ -38,6 +38,8 @@ void init_semaforos() {
     semctl(sem_id, 2, SETVAL, 0);         // pedidos disponibles
 }
 
+//Estructuras de datos para gestión del semáforo, que controla el acceso
+//al recurso compartido:
 // Operación P (wait)
 void sem_wait(int sem_num) {
     struct sembuf op = {sem_num, -1, 0};
