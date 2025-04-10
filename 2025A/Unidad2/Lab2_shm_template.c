@@ -24,10 +24,12 @@ typedef struct {
     int tail;  // índice donde el cliente escribe
 } BufferCompartido;
 
+//esta misma llave la deben tener los clientes y la cocina:
 #define SHM_KEY 0x1234
 #define SEM_KEY 0x5678
 
 // Semáforos: 0 = mutex, 1 = espacio disponible, 2 = pedidos disponibles
+//mutex = mutual exclusion lock, candado de exclusión mutua.
 int sem_id;
 
 // Función de inicialización de semáforos
