@@ -87,7 +87,9 @@ Pedido pedidos[10]; // cola circular de pedidos
 
 ---
 
-##  Entregables
+##  Entregables y fecha de entrega
+
+### 1 entrega por grupo, plazo máximo, abril 30 de 2025
 
 - Implementación en C usando:
   - Opción A: FIFO bidireccional
