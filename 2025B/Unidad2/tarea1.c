@@ -10,6 +10,7 @@ void cpu_task(int n, const char *name) {
     for (int i = 0; i < n; i++) {
         if (i % (n/5 + 1) == 0) {
             printf("[%s] paso %d (pid=%d)\n", name, i, getpid());
+            //boni: sleep aleatorio
             usleep(50000); // pequeña pausa simulada
         }
     }
@@ -38,7 +39,9 @@ int main() {
         if (/* TODO: condición para saber si es hijo */) {
             // (4) TODO: usar nice() para variar prioridades
             // Sugerencia: si i % 2 == 0 => nice(5); else => nice(0);
-            
+            // el "niceness" de un proceso es una métrica que se calcula de acuerdo a la prioridad:
+            // es un valor de -20 a 19
+            // ver: https://askubuntu.com/questions/656771/process-niceness-vs-priority
 
             // Construir nombre de proceso
             char nombre[32];
