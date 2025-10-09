@@ -21,7 +21,8 @@ void writer() {
     char message[] = "Hola desde el proceso escritor!";
 
     // Crear FIFO si no existe
-    mkfifo(FIFO_PATH, 0666);
+    mkfifo(FIFO_PATH, 0666); //chmod  rwx  rwx rwx
+                             //       110  110 110 
 
     // Abrir FIFO en modo escritura
     fd = open(FIFO_PATH, O_WRONLY);
@@ -32,6 +33,7 @@ void writer() {
 
     // Escribir en FIFO
     write(fd, message, strlen(message) + 1);
+    sleep(10);
     close(fd);
 }
 
@@ -48,8 +50,10 @@ void reader() {
     }
 
     // Leer desde FIFO
+    //leer forma iterativo:
     read(fd, buffer, BUFFER_SIZE);
     printf("Proceso lector recibió: %s\n", buffer);
+    sleep(10);
     close(fd);
 
     // Eliminar FIFO
