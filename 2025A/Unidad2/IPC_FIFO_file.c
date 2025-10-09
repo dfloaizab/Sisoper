@@ -1,7 +1,7 @@
 /*
  * IPC usando archivos FIFO en Linux
  * Este programa muestra cómo un proceso puede comunicarse con otro
- * utilizando un FIFO (named pipe).
+ * utilizando un FIFO (named pipes).
  */
 
 #include <stdio.h>
