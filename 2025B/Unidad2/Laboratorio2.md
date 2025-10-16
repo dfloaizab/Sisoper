@@ -145,7 +145,6 @@ int main() {
 7. Analice el comportamiento del cambio de contexto en este sistema.  
 8. ¿Por qué es importante liberar la memoria compartida antes de finalizar?  
 9. ¿Qué diferencias existen entre compartir datos con `shm` y hacerlo mediante archivos temporales?  
-10. ¿Cómo podría extenderse este sistema para incorporar semáforos y sincronización avanzada?  
 
 ## 7. Recomendaciones
 - Compilar con `gcc -o lab_ipc lab_ipc.c` y ejecutar en terminal Linux.  
