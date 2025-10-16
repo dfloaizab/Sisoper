@@ -106,6 +106,7 @@ int main() {
             // TODO: leer datos, copiar en memoria compartida y calcular a*b
             // TODO: usar malloc para crear un arreglo de resultados
             // TODO: imprimir resultados parciales
+            //men->a, mem->b, mem->listo
             exit(0);
         } else {
             pid_cons2 = fork();
