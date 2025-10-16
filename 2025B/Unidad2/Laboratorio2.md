@@ -150,7 +150,7 @@ int main() {
 - Compilar con `gcc -o lab_ipc lab_ipc.c` y ejecutar en terminal Linux.  
 - Verificar el segmento de memoria compartida con `ipcs -m`.  
 - Eliminar manualmente recursos residuales con `ipcrm -m <id>` y `unlink("canal_fifo")`.  
-- Monitorear procesos y prioridades con `top`, `htop`, o `ps -l`.  
+- Monitorear procesos y prioridades con `top`, `htop`, o `ps -l`, `ps -ef | grep lab_ipc`.  
 
 ## 8. Referencias
 - Stallings, W. (2018). *Operating Systems: Internals and Design Principles* (9th ed.). Pearson Education. Capítulos 3 y 5.  
