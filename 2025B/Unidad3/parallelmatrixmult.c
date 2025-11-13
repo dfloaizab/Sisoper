@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+//esta estructura guarda la información que se guarda a cada hilo que se va a ejecutar en paralelo:
 typedef struct {
     int tid;
     int n;
@@ -19,6 +20,7 @@ typedef struct {
     double *C;
 } MatMulArg;
 
+//esta es la función que cada hilo ejecuta en paralelo (multiplica un rango de filas por un rango de columnas y guarda un resultado parcial):
 void* matmul_worker(void* arg) {
     MatMulArg* a = (MatMulArg*)arg;
     int n = a->n;
@@ -62,10 +64,16 @@ int main(int argc, char** argv) {
     pthread_t threads[num_threads];
     MatMulArg args[num_threads];
 
+    //ESTOS PARÁMETROS CORRESPONDEN A LA MULTIPLICACIÓN DE MATRICES:
+    //argumentos que corresponden a la multiplicación de matrices: 
+    //número de filas que le tocan a cada hilo
     int base = n / num_threads;
+    //residuo para asignar una fila adicional a los hilos restantes   
     int rem = n % num_threads;
+    //indice inicial de la fila a asignar
     int row = 0;
 
+    // EJECUCIÓN DE LOS HILOS EN PARALELO
     // Crear hilos, asignar bloques de filas
     for (int t = 0; t < num_threads; ++t) {
         int chunk = base + (t < rem ? 1 : 0);
