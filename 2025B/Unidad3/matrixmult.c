@@ -35,6 +35,11 @@ int main(int argc, char** argv)
     // R1 = 4, C1 = 4 and R2 = 4, C2 = 4 (Update these
     // values in MACROs)
     int n = atoi(argv[1]);
+
+    R1 = n;
+    C1 = n;
+    R2 = n;
+    C2 = n;
     
     int m1[n][n];
 
