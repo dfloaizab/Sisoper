@@ -30,13 +30,17 @@ void multiplyMatrix(int m1[][C1], int m2[][C2])
 }
 
 // Driver code
-int main()
+int main(int argc, char** argv)
 {
     // R1 = 4, C1 = 4 and R2 = 4, C2 = 4 (Update these
     // values in MACROs)
-    int m1[R1][C1] = { { 1, 1 }, { 2, 2 } };
+    int n = atoi(argv[1]);
+    
+    int m1[n][n];
 
-    int m2[R2][C2] = { { 1, 1, 1 }, { 2, 2, 2 } };
+    int m2[n][n];
+
+    //inicializar con un for:
 
     // if coloumn of m1 not equal to rows of m2
     if (C1 != R2) {
