@@ -1,4 +1,5 @@
-# Taller Evaluables de Programación Concurrente y Paralela en C  
+# Evaluación Final 2025B
+## Programación Concurrente y Paralela en C  
 ## Universidad Santiago de Cali
 **Autor:** Diego Fernando Loaiza Buitrago  
 **Curso:** Sistemas Operativos  
