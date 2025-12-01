@@ -3,20 +3,23 @@
 **Autor:** Diego Fernando Loaiza Buitrago  
 **Curso:** Sistemas Operativos  
 **Lenguaje:** C  
-**Valor total:** 10 puntos  
 ---
 
-### Programación Concurrente con Hilos en C (POSIX pthreads) y Programación Paralela con 
+### Programación Concurrente con Hilos en C (POSIX pthreads) y programación paralela sin OpenMP
 
 #### Objetivos
 - Crear hilos con `pthread_create`.
 - Sincronizar ejecución con `pthread_join`.
 - Compartir datos usando paso de parámetros a hilos.
 - Reconocer problemas de condición de carrera.
+- Comprender la diferencia entre concurrencia con hilos y paralelismo con procesos.  
+- Crear múltiples procesos usando `fork()`.  
+- Compartir datos entre procesos mediante **memoria compartida POSIX** (`shm_open`, `mmap`).  
+- Dividir una tarea matemática en partes y ejecutarla en paralelo.  
 
 ---
 
-#### Ejercicio 1 — Completar el código (3.0 puntos)
+#### Ejercicio 1 — Completar el código (2.5 puntos)
 
 **Actividad:** completar un programa donde **3 hilos imprimen secuencias de números**:
 
@@ -60,7 +63,7 @@ int main() {
 
 ````
 
-#### Ejercicio 2 — Preguntas teóricas (2.0 puntos)
+#### Preguntas teóricas (2.0 puntos)
 
 ¿Qué diferencia principal existe entre un proceso y un hilo?
 
@@ -70,31 +73,18 @@ int main() {
 
 ¿Qué técnica usaría para evitar condiciones de carrera?
 
-## Rúbrica (5.0 puntos)
-Criterio	Descripción	Puntos
-Código funcional	Completa correctamente el programa, compila y ejecuta	3.0
-Correcto uso de pthreads	pthread_create y pthread_join bien utilizados	0.5
-Respuestas teóricas	Claras, correctas y completas	1.0
-Estilo de código	Organización, indentación y comentarios	0.5
-Total		5.0
+### Programación Concurrente con Hilos en C (POSIX pthreads) y programación paralela sin OpenMP
 
-# 🧪 Ejercicio de Programación Paralela en C **sin OpenMP**  
-## Usando procesos (fork) + memoria compartida POSIX  
-**Formato:** Taller evaluable  
-**Valor:** 5 puntos  
-**Nivel:** Introductorio – Programación paralela sin librerías externas  
+#### Ejercicio 2: Programación Paralela en C **sin OpenMP**  (2.5 puntos)
+#### Usando procesos (fork) + memoria compartida POSIX  
 
----
-
-# 🎯 Objetivos
+#### Objetivos
 - Comprender la diferencia entre concurrencia con hilos y paralelismo con procesos.  
 - Crear múltiples procesos usando `fork()`.  
 - Compartir datos entre procesos mediante **memoria compartida POSIX** (`shm_open`, `mmap`).  
 - Dividir una tarea matemática en partes y ejecutarla en paralelo.  
 
----
-
-# 🧩 Descripción del ejercicio
+####  Descripción del ejercicio
 
 Implementar un programa en C que calcule la **suma de los primeros 1,000,000 números**, paralelizando la tarea en **4 procesos hijo**, sin usar hilos ni OpenMP.
 
@@ -105,7 +95,7 @@ Cada proceso debe:
 
 ---
 
-# 📝 Código base (INCOMPLETO — el estudiante debe completarlo)
+#### Código base (Completar)
 
 ```c
 #include <stdio.h>
@@ -166,12 +156,15 @@ int main() {
     return 0;
 }
 
- ```
+```
+#### Preguntas teóricas
 
-## Referencias
+- ¿Por qué este ejercicio es paralelo y no solo concurrente?
+- ¿Qué diferencia clave hay entre `fork()` y `pthread_create()`?
+- ¿Por qué se necesita memoria compartida y no una variable global?
+- ¿Qué función se usa para esperar a un proceso hijo?
 
-OpenMP Application Programming Interface v5.2
-https://www.openmp.org/wp-content/uploads/OpenMP-API-Specification-5-2.pdf
+### Referencias
 
-POSIX Threads Programming — LLNL
-https://computing.llnl.gov/tutorials/pthreads/
+- OpenMP Application Programming Interface v5.2 https://www.openmp.org/wp-content/uploads/OpenMP-API-Specification-5-2.pdf
+- POSIX Threads Programming — LLNL https://computing.llnl.gov/tutorials/pthreads/
