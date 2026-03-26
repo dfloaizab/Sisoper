@@ -138,13 +138,10 @@ int main() {
 ## 6. Preguntas de análisis
 1. Describa los estados del ciclo de vida de cada proceso durante la ejecución del programa.  
 2. ¿Qué mecanismo de IPC es más eficiente para el intercambio de datos en este caso y por qué?  
-3. ¿Qué problemas de sincronización pueden presentarse y cómo pueden evitarse?  
-4. ¿Cómo afectaría el algoritmo de planificación (Round Robin, CFS, etc.) al rendimiento del programa?  
-5. ¿Qué impacto tendría cambiar el nivel de “niceness” del proceso Productor respecto a los Consumidores?  
-6. ¿Qué sucede si un proceso intenta leer del FIFO cuando está vacío?  
-7. Analice el comportamiento del cambio de contexto en este sistema.  
-8. ¿Por qué es importante liberar la memoria compartida antes de finalizar?  
-9. ¿Qué diferencias existen entre compartir datos con `shm` y hacerlo mediante archivos temporales?  
+3. ¿Qué sucede si un proceso intenta leer del FIFO cuando está vacío?  
+4. Analice el comportamiento del cambio de contexto en este sistema.  
+5. ¿Por qué es importante liberar la memoria compartida antes de finalizar?  
+6. ¿Qué diferencias existen entre compartir datos con `shm` y hacerlo mediante archivos FIFO temporales?  
 
 ## 7. Recomendaciones
 - Compilar con `gcc -o lab_ipc lab_ipc.c` y ejecutar en terminal Linux.  
