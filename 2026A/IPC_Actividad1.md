@@ -1,4 +1,4 @@
-# Laboratorio de Sistemas Operativos 2025B
+# Laboratorio de Sistemas Operativos 2026A
 ## Universidad Santiago de Cali
 ## Comunicación Cooperativa entre Procesos con Memoria Compartida y FIFO
 
