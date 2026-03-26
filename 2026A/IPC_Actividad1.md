@@ -127,7 +127,7 @@ int main() {
     return 0;
 }
 ```
-##Código de Ejemplo para uso de memoria Compartida (Shared Memory):
+## Código de Ejemplo para uso de memoria compartida solamente (Shared Memory):
 ```c
 #include <stdio.h>
 #include <stdlib.h>
