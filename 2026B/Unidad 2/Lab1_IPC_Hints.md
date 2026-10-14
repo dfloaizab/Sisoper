@@ -32,7 +32,7 @@ Al finalizar la sesión, el estudiante estará en capacidad de:
 4. Usar herramientas de Linux (`ipcs`, `ps`, `top`, `strace`, `/proc`) para **evidenciar** el comportamiento de los procesos y los recursos IPC.
 5. Liberar correctamente los recursos del sistema (segmentos `shm`, FIFO, procesos zombis).
 
-**Ruta sugerida de la clase:** (1) motivación y concepto → (2) lectura crítica del código base → (3) demostración de la condición de carrera → (4) mitigación con semáforos → (5) verificación con comandos → (6) preguntas de análisis.
+<!-- **Ruta sugerida de la clase:** (1) motivación y concepto → (2) lectura crítica del código base → (3) demostración de la condición de carrera → (4) mitigación con semáforos → (5) verificación con comandos → (6) preguntas de análisis. -->
 
 ---
 
